@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Popins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: #333;
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+#menu {
+    background: #333;
+    width: 300px;
+    height: 100%;
+}
+
+#menu .logo {
+    display: flex;
+    align-items: center;
+    color: white;
+    padding: 20px 0px 20px 30px;
+    background-color: black;
+}
+
+#menu .items {
+    margin-top: 0px;
+}
+
+#menu .items li:hover {
+    background: grey;
+    cursor: pointer;
+}
+
+#menu .items li:nth-child(1) {
+    border-left: 4px solid white;
+}
+
+#menu .items li {
+    list-style: none;
+    padding: 5px 5px;
+    padding-top: 10px;
+    transition: 0.3s ease;
+    border: 1px solid #000;
+}
+
+#menu .items i {
+    margin: 0 10px 0 25px;
+    width: 30px;
+    height: 30px;
+    line-height: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(220, 223, 225);
+}
+
+#menu .items li:hover i,
+#menu .items li:hover a {
+    color: white;
+}
+
+#menu .items li a {
+    text-decoration: none;
+    color: rgb(220, 223, 225);
+    font-weight: 300px;
+    transition: 0.3s ease;
+}
+
+#interface {
+    width: calc(100% - 300px);
+    background-image: url('image/market.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#interface .navigation {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #333;
+    padding: 15px 30px;
+}
+
+.n1 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#menu-button {
+    display: none;
+    color: aliceblue;
+    font-size: large;
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#interface .navigation .search {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 14px;
+    border: 1px solid aliceblue;
+    border-radius: 4px;
+    background-color: aliceblue;
+}
+
+#interface .navigation .search input {
+    border: none;
+    outline: none;
+    font-size: 14px;
+    background-color: aliceblue;
+}
+
+#interface .navigation a i {
+    color: aliceblue;
+    font-size: 18px;
+}
+
+#interface .navigation a:hover i {
+    color: white;
+}
+
+#interface .navigation .profile {
+    margin-right: 20px;
+    padding-right: 5px;
+    font-size: 14px;
+    color: rgb(220, 223, 225);
+}
+
+#interface .navigation .profile i {
+    margin-right: 20px;
+}
+
+.i-name {
+    color: white;
+    font-size: 24px;
+    font-weight: 700;
+    padding: 30px 30px 0 30px;
+}
+
+.j-name {
+    color: white;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 5px 30px 0 30px;
+}
+
+.j-name a {
+    color: white;
+}
+
+.values {
+    padding: 15px 15px 10 px 15px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.values .val-box {
+    width: 225px;
+    padding: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 10px;
+    border-radius: 5px;
+    justify-content: flex-start;
+    background-image: url('image/value.jpg');
+    background-attachment: fixed;
+    background-size: contain;
+}
+
+.values .valbox0 {
+    display: flex;
+    align-items: right;
+    color: white;
+    padding: 20px 0 0 140px;
+}
+
+.values .valbox {
+    display: flex;
+    padding: 0 0 0 70px;
+    align-items: right;
+}
+
+.values .valbox i {
+    color: aquamarine;
+}
+
+.container {
+    width: 500px;
+    padding: 10px 5px 10px 10px;
+    margin: 30px 00px 30px 30px;
+    border-top-right-radius: 400px;
+    border-bottom-right-radius: 400px;
+    justify-content: flex-start;
+    background-color: rgb(173, 45, 45);
+    opacity: 0.8;
+    box-shadow: 0 0 10px 7px rgb(207, 207, 25),
+        0 0 10px 7px rgb(207, 207, 25),
+        0 0 10px 7px rgb(207, 207, 25),
+        0 0 10px 7px rgb(207, 207, 25);
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+    text-decoration: solid;
+    opacity: 1;
+}
+
+th {
+    color: white;
+    font-weight: bold;
+    text-align: left;
+    padding: 10px;
+    border-collapse: collapse;
+    text-decoration: solid;
+
+}
+
+td {
+    padding: 10px;
+    color: white;
+    text-align: left;
+    text-decoration: solid;
+    border-collapse: collapse;
+}
+
+@media (max-width: 769px) {
+    #menu {
+        width: 300px;
+        position: fixed;
+        left: -300px;
+        transition: 0.3s ease;
+    }
+
+    #menu.active {
+        left: 0px;
+        width: 300px;
+    }
+
+    #menu-button {
+        display: initial;
+    }
+
+    #interface {
+        width: 100%;
+        margin-left: 0px;
+        position: inline-block;
+    }
+
+    #menu.active~#interface {
+        width: calc(100% - 300px);
+        margin-left: 300px;
+    }
+
+    #interface .navigation {
+        width: 100%;
+    }
+}
